@@ -1,0 +1,146 @@
+
+/* =========================================
+   SOPHISTICATED HEADER & MEGA MENU
+   ========================================= */
+
+:root {
+  --nav-height: 147px; /* Adjusted for dual row setup */
+}
+
+.site-header {
+  height: auto;
+  display: block;
+  background: transparent;
+  padding: 0;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0; /* Removing gap to let padding handle click area */
+}
+
+.main-nav-links > li {
+  position: relative;
+}
+
+.main-nav-links > li > a {
+  color: var(--kh-white); 
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 18px 20px;
+  display: block;
+}
+
+.main-nav-links > li:hover > a {
+  background-color: var(--kh-aqua);
+  color: var(--kh-white);
+}
+
+.main-nav-links > li > a::after {
+  display: none; /* override previous underline animation */
+}
+
+/* Mega Menu Dropdown */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  min-width: 450px;
+  background-color: var(--kh-white);
+  box-shadow: 0 15px 35px rgba(0,71,79,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  border-top: 4px solid var(--kh-aqua);
+  padding: 2.5rem;
+  pointer-events: none;
+  z-index: 101;
+  text-align: left;
+}
+
+.dropdown-parent:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mega-menu-grid {
+  display: flex;
+  gap: 3.5rem;
+}
+
+.mega-menu-grid h4 {
+  font-family: var(--font-body);
+  color: var(--kh-dark-teal);
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.mega-menu-grid a {
+  display: block;
+  font-family: var(--font-body);
+  color: #444;
+  font-size: 1rem;
+  padding: 6px 0;
+  text-transform: none;
+  font-weight: 500;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.mega-menu-grid a:hover {
+  color: var(--kh-aqua);
+  transform: translateX(5px); /* Cinematic slide effect */
+}
+
+/* Ensure right-aligned items don't overflow screen */
+.main-nav-links > li:nth-last-child(-n+3) .mega-menu {
+  left: auto;
+  right: 0;
+}
+
+.mega-menu-promo {
+  width: 280px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.promo-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,71,79,0.95));
+  padding: 1.5rem;
+  pointer-events: none;
+}
+
+.promo-overlay h4 {
+  color: var(--kh-aqua);
+  margin-bottom: 0.2rem;
+  border: none;
+  padding: 0;
+  font-family: var(--font-hero);
+  font-size: 1.4rem;
+}
+.promo-overlay p {
+  color: var(--kh-white);
+  font-size: 0.95rem;
+  margin: 0;
+}
