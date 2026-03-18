@@ -1,0 +1,26 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": null,
+  "rewrites": [
+    { "source": "/air-conditioning", "destination": "/air-conditioning.html" },
+    { "source": "/bathrooms", "destination": "/bathrooms.html" },
+    { "source": "/chimney-rebuilt", "destination": "/chimney-rebuilt.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/electrician-adelaide", "destination": "/electrician-adelaide.html" },
+    { "source": "/fascias-soffits", "destination": "/fascias-soffits.html" },
+    { "source": "/flat-roofs", "destination": "/flat-roofs.html" },
+    { "source": "/gas", "destination": "/gas.html" },
+    { "source": "/guttering", "destination": "/guttering.html" },
+    { "source": "/join", "destination": "/join.html" },
+    { "source": "/membership", "destination": "/membership.html" },
+    { "source": "/new-roofs", "destination": "/new-roofs.html" },
+    { "source": "/plumber-adelaide", "destination": "/plumber-adelaide.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/reviews", "destination": "/reviews.html" },
+    { "source": "/roof-repairs", "destination": "/roof-repairs.html" },
+    { "source": "/roofing", "destination": "/roofing.html" },
+    { "source": "/trades", "destination": "/trades.html" },
+    { "source": "/about", "destination": "/about.html" }
+  ]
+}
